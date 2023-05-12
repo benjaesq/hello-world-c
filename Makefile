@@ -3,9 +3,9 @@ EXEC=helloworld
 all: $(EXEC)
 
 $(EXEC):
-	cc -o $(EXEC) $(EXEC).c
+	$(CC) -o $(EXEC) $(EXEC).c
 clean:
-	rm $(EXEC)
+	rm -f $(EXEC)
 
 install: all 
 	install $(EXEC) $(DESTDIR)$(bindir)
